@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: normal 18px arial;
+            background: darkcyan;
+        }
+
+        nav {
+            background: darkgrey;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5%;
+            list-style: none;
+        }
+
+        nav > ul > li {
+            display: block;
+        } 
+
+        .botao {
+            padding: 15px;
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                        <strong>Home</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            shower
+                        </span>
+                        <strong>Curriculo</strong></a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="material-symbols-outlined">
+                            domain
+                        </span>
+                        <strong>Contato</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <button class="botao" onclick="mododark()">
+                Modo Dark
+            </button>
+        </div>
+    </main>
+
+    <script>
+        function mododark() {
+
+            var a = window.document.getElementsByTagName('body')[0]
+
+            a.style.background == 'red' ? a.style.background = 'darkcyan' : a.style.background = 'red'
+            
+            a.style.background == 'darkcyan' ? a.style.background = 'darkcyan' : a.style.background = 'red'
+
+            
+        }
+
+    </script>
+</body>
+</html>
